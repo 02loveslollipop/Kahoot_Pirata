@@ -60,7 +60,7 @@ class MainNoSession extends StatelessWidget {
                     ),
                     children: const <TextSpan>[
                       TextSpan(
-                          text: "The worst AI-Driven shitty Kahoot rip-off",
+                          text: "The worst AI-Driven\nshitty Kahoot rip-off",
                           style: TextStyle(
                             overflow: TextOverflow.clip,
                           )),

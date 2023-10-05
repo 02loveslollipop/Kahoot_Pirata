@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_example1/main_with_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LogIn extends StatelessWidget {
@@ -14,7 +15,7 @@ class LogIn extends StatelessWidget {
           shadowColor: Colors.transparent,
           leading: IconButton(
             color: const Color(0xFF46178F),
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             onPressed: () {
               // Navigate back to the previous page
               Navigator.of(context).pop();
@@ -94,10 +95,9 @@ class LogIn extends StatelessWidget {
                   ),
                   child: ElevatedButton(
                     onPressed: () {
-                      // TODO: Add your login logic here
                       Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const LogIn()),
+                      MaterialPageRoute(builder: (context) => const MainMenuWithLogin()),
                       );
                     },
                     style: ElevatedButton.styleFrom(
