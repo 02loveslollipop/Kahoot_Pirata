@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-void main() {
-  runApp(const MaterialApp(
-    title: 'Kahoot Pirata, a shitty AI-Driven Kahoot rip-off',
-    home: MainMenuWithLogin(),
-  ));
-}
+import "create_game.dart";
 
 class MainMenuWithLogin extends StatelessWidget {
   const MainMenuWithLogin({super.key});
@@ -56,13 +50,18 @@ class MainMenuWithLogin extends StatelessWidget {
                 const SizedBox(height: 20.0),
                 Wrap(
                   alignment: WrapAlignment.center,
-                  spacing: 20.0, // Horizontal spacing between buttons
+                  spacing: 20.0,
                   children: [
                     SizedBox(
-                      width: 300.0, // Fixed width for the button
+                      width: 300.0,
                       child: ElevatedButton(
                         onPressed: () {
-                          // Add your "Create game" button logic here
+                          //"Create game" logic here
+                          //Push to the create game page
+                          Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const CreateGame()),
+                          );
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFFC60929),
@@ -85,10 +84,10 @@ class MainMenuWithLogin extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 300.0, // Fixed width for the button
+                      width: 300.0,
                       child: ElevatedButton(
                         onPressed: () {
-                          // Add your "See result" button logic here
+                          // "See result" logic here
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFF0542B9),
@@ -114,7 +113,7 @@ class MainMenuWithLogin extends StatelessWidget {
                       width: 300.0, // Fixed width for the button
                       child: ElevatedButton(
                         onPressed: () {
-                          // Add your "Search game" button logic here
+                          // "Search game" logic here
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFFD89E00),
@@ -140,7 +139,7 @@ class MainMenuWithLogin extends StatelessWidget {
                       width: 300.0, // Fixed width for the button
                       child: ElevatedButton(
                         onPressed: () {
-                          // Add your "See my games" button logic here
+                          //"See my games" logic here
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFF106B03),
